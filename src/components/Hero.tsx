@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Hero() {
   return (
     <section
@@ -66,11 +68,17 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Image placeholder */}
+        {/* Profile Image */}
         <div className="flex-shrink-0">
           <div className="w-72 h-72 lg:w-96 lg:h-96 rounded-full bg-gradient-to-br from-accent to-primary-light p-1.5 shadow-2xl">
-            <div className="w-full h-full rounded-full bg-gradient-to-br from-primary-light to-primary flex items-center justify-center">
-              <span className="text-8xl text-white/20 font-bold">أ.ن</span>
+            <div className="w-full h-full rounded-full overflow-hidden relative">
+              <Image
+                src="/ayman-nour.png"
+                alt="الدكتور أيمن نور"
+                fill
+                className="object-cover"
+                priority
+              />
             </div>
           </div>
         </div>
